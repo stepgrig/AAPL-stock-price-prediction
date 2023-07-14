@@ -23,9 +23,11 @@ Taking the **logarithm** of a time series can help stabilize the variance and re
  <br>![Screenshot (32)](https://github.com/stepgrig/AAPL-stock-price-prediction/assets/103223897/1294d8ee-a3e7-4e3f-889b-703346b36d53)
 Counting the rolling mean and subtracting it from a log-transformed time series can be a technique used to remove the trend component from the series. This step aims to eliminate the gradual changes or systematic patterns in the data, resulting in a detrended or stationary series. This is particularly useful when the time series exhibits a clear trend that needs to be removed for further analysis or modeling.
 ![plot4](https://github.com/stepgrig/AAPL-stock-price-prediction/assets/103223897/7f31e8b4-7a8b-40d7-b9cf-67842f09493c)
+
 <br>Our data is now stationarized 
 ![Screenshot (33)](https://github.com/stepgrig/AAPL-stock-price-prediction/assets/103223897/a41e7870-21a3-44e7-9171-5f5575255217)
 ### Splitting Data
 We split the series based on a specific time duration. We split the series by using a certain percentage of the data for training and the remaining percentage for testing. This approach ensures that the training and testing sets maintain the temporal order of the data.
 Splitting the Data keeping chronoligal order of the values. We don't shuffle. Training set should include all the values from the beginning of the data up to a specific point in time. The rest will be a testing set. We have to decide how to split our training dataset if it is too large the model will fit the trainig set too well and will perform poorly. If it is too small we will not be able to create model accurate. Let's do 80-20.
+![plot5](https://github.com/stepgrig/AAPL-stock-price-prediction/assets/103223897/4e0ef371-d459-46b0-931f-a44d850018c3)
 
